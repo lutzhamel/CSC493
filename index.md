@@ -1,5 +1,11 @@
 ![paradigms](paradigms.jpg)
 
+<hr>
+
+[Syllabus](docs/syllabus.pdf)
+
+<hr>
+
 [What is a programming paradigm?]() <br>
 [Multi-paradigm programming languages]() <br>
 [Imperative programming]() <br>
