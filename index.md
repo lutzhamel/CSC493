@@ -2,7 +2,8 @@
 
 <hr>
 
-[Syllabus](docs/syllabus.pdf)
+[Syllabus](docs/syllabus.pdf)<br>
+[Programs](https://github.com/lutzhamel/CSC493/tree/main/programs)<br>
 
 <hr>
 
