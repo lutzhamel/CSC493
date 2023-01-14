@@ -6,7 +6,7 @@
 [Syllabus](docs/syllabus.pdf)<br>
 [Programs](https://github.com/lutzhamel/CSC493/tree/main/programs)<br>
 [Asteroid Documentation](https://asteroid-lang.readthedocs.io/en/latest)<br>
-[Cloud Based Asteroid](https://replit.com/@lutzhamel/asteroid#README.md)<br>
+[Cloud Based Asteroid](https://replit.com/@LutzHamel1/asteroid-csc493#README.md)<br>
 
 <hr>
 # Lecture Notes
