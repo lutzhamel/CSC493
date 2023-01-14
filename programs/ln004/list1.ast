@@ -1,0 +1,13 @@
+-- using pattern matching to test whether
+-- a specific element exists on a list
+
+load system io.
+load system type.
+
+let l = ["turkey", "goose", "chicken", "blue jay"].
+
+if type @tostring l is ".*blue jay.*" do
+   io @println "the Blue Jay is on the list".
+else do
+   io @println "Blue Jay was not found".
+end

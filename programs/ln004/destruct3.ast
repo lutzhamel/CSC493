@@ -1,0 +1,10 @@
+structure Person with
+    data name.
+    data age.
+    data profession.
+end
+
+let joe = Person("Joe", 32, "Cook").  -- construct an object
+let Person(n,a,p) = joe.              -- pattern match object
+
+assert (n=="Joe" and a==32 and p=="Cook").
