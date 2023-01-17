@@ -1,0 +1,14 @@
+load system io.
+load system type.
+
+function print_components with value do
+   if type @gettype value == "tuple" and len value == 3 do
+      io @println ("Components of triple: "+value@0+","+value@1+","+value@2).
+   elif type @gettype value == "tuple" and len value == 2 do
+      io @println ("Components of pair: "+value@0+","+value@1).
+   else do
+      io @println "Error: Not a triple or pair".
+   end
+end
+
+print_components (1,2).

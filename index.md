@@ -18,3 +18,4 @@
 [The Basics](notes/csc493-ln002.pdf)<br>
 [Data Structures](notes/csc493-ln003.pdf)<br>
 [The Let Statement & Pattern Matching](notes/csc493-ln004.pdf)<br>
+[Flow of Control & Pattern Matching](notes/csc493-ln005.pdf)<br>

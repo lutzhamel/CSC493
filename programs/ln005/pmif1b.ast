@@ -1,0 +1,13 @@
+load system io.
+
+function print_components with value do
+    if value is (x,y,z) do
+        io @println ("Components of triple: "+x+","+y+","+z).
+    elif value is (x,y) do
+        io @println ("Components of pair: "+x+","+y).
+    else do
+      io @println "Error: Not a triple or pair".
+    end
+end
+
+print_components (1,2).

@@ -1,0 +1,20 @@
+load system io.
+
+structure Person with
+   data name.
+   data age.
+end
+
+-- define a list of persons
+let people = [
+   Person("George", 32),
+   Person("Sophie", 46),
+   Person("Oliver", 21)
+].
+
+-- print names that contain 'p'
+for person in people do
+   if "p" in person @name @explode () do
+      io @println (person @name).
+   end
+end
