@@ -1,0 +1,5 @@
+function scale with (a,b) do -- using pattern matching on the input arg
+   return (2*a,3*b).
+end
+
+assert (scale (1,2) == (2,6)).

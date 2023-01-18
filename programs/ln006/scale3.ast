@@ -1,0 +1,8 @@
+load system math.
+
+function scale with (a:%real,b:%real) do -- only allow pairs of real values
+   return (2*a,3*b).
+end
+
+let (x,y) = scale (1.1,2.2).
+assert (math @isclose (x,2.2) and math @isclose (y,6.6)).

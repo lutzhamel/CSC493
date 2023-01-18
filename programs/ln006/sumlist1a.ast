@@ -1,0 +1,11 @@
+function sumlist with x do
+   if x is [] do
+      return 0.
+   else do
+      let [(h:%integer) | t] = x.
+      return h + sumlist t.
+   end
+end
+
+assert (sumlist [1,2,3] == 6).
+

@@ -1,0 +1,9 @@
+function scale with x do
+   if x is (a,b) do  -- using pattern matching on the value
+      return (2*a,3*b).
+   else do
+      throw Error("expected a pair of values").
+   end
+end
+
+assert (scale (1,2) == (2,6)).

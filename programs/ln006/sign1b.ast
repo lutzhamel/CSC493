@@ -1,0 +1,10 @@
+function sign
+   with 0 do                     
+      return 1.
+   with (n:%integer) if n > 0 do 
+      return 1.
+   with (n:%integer) if n < 0 do 
+      return -1.
+end
+
+assert (sign 1 == 1).

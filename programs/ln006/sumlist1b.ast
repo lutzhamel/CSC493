@@ -1,0 +1,9 @@
+function sumlist
+   with [] do
+      return 0.
+   with [(h:%integer) | t] do
+      return h + sumlist t.
+end
+
+assert (sumlist [1,2,3] == 6).
+

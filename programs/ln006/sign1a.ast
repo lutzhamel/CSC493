@@ -1,0 +1,13 @@
+function sign with x do
+   if x is 0 do                      
+      return 1.
+   elif x is (n:%integer) if n > 0 do  
+      return 1.
+   elif x is (n:%integer) if n < 0 do 
+      return -1.
+   else do
+      throw Error("invalid input").
+   end
+end
+
+assert (sign 1 == 1).

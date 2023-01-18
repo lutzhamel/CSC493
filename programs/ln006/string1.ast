@@ -1,0 +1,7 @@
+load system io.
+
+function uppercase with (x:%string) if x is "[A-Z]*" do -- upper case words
+   io @println ("\""+x+"\" is an uppercase string").
+end
+
+uppercase "HELLO".
