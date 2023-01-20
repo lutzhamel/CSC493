@@ -1,0 +1,9 @@
+function factorial
+    with 0 do
+        return 1
+    with (n:%integer) if n > 0 do
+        return n * factorial (n-1).
+end
+
+assert (factorial 3 == 6).
+

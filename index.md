@@ -13,7 +13,7 @@
 
 [Introduction](notes/csc493-ln001.pdf)<br>
 
-## Imperative Programming with Asteroid
+## Imperative Programming with Pattern Matching
 
 [The Basics](notes/csc493-ln002.pdf)<br>
 [Data Structures](notes/csc493-ln003.pdf)<br>

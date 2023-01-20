@@ -1,0 +1,20 @@
+function qsort
+   with [] do -- base case 1
+      [].
+   with [a] do -- base case 2
+      [a].
+   with [pivot|rest] do -- recursive step
+      let less=[].
+      let more=[].
+      for e in rest do
+         if e < pivot do
+            less @append e.
+         else
+            more @append e.
+         end
+      end
+      qsort less + [pivot] + qsort more.
+end
+
+assert (qsort [3,2,1,0] == [0,1,2,3]).
+
