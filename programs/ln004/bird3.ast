@@ -1,0 +1,16 @@
+load system io.
+
+structure Bird with
+   data size.
+   data coloration.
+   data markings.
+end
+
+let observed_bird = Bird("tiny","red","black stripes").
+let Bird("tiny","red",m) = observed_bird.  -- pattern match
+
+-- variables in patterns are instantiated
+assert (isdefined "m").
+assert (m == "black stripes").
+
+

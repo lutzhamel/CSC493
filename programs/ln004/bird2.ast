@@ -7,10 +7,14 @@ structure Bird with
 end
 
 let observed_bird = Bird("tiny","red","black stripes").
-let Bird("tiny","red",m) = observed_bird.  -- pattern match
 
--- variables in patterns are instantiated
-assert (isdefined "m").
-assert (m == "black stripes").
-
+if observed_bird is Bird("big","blue","yellow dots") do -- pattern match
+   io @println "it is a blue polka".
+elif observed_bird is Bird("tiny","red","green stripes") do  -- pattern match
+   io @println "it is a green striped finch".
+elif  observed_bird is Bird("tiny","red","black stripes") do  -- pattern match
+   io @println "it is a striped sparrow".
+else do
+   io @println "unkown bird".
+end
 
