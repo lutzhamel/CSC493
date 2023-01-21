@@ -1,0 +1,15 @@
+function scale with (a:%real,b:%real) do -- only allow pairs of real values
+   return (2*a,3*b).
+end
+
+-- this fails
+try
+   let (2.2,6.6) = scale (1.1,2.2).
+catch e do
+   load system io.
+   io @println e.
+end
+
+-- this works
+load system math.
+let (x,y) if math @isclose (x,2.2) and math @isclose (y,6.6) = scale (1.1,2.2).

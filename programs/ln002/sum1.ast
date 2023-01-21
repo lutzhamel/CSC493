@@ -1,0 +1,16 @@
+-- sum the elements of a list
+load system io.
+
+-- initialize state
+let lst = [1,2,3].
+let sum = 0.
+
+-- modify state each time around the loop by
+--   (1) assigning a new value to x from the list
+--   (2) incrementing sum by x
+for x in lst do
+   let sum = sum + x.
+end
+
+io @println sum.
+
