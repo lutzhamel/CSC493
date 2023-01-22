@@ -8,13 +8,17 @@ end
 
 let observed_bird = Bird("tiny","red","black stripes").
 
-if observed_bird is Bird("big","blue","yellow dots") do -- pattern match
-   io @println "it is a blue polka".
-elif observed_bird is Bird("tiny","red","green stripes") do  -- pattern match
-   io @println "it is a green striped finch".
-elif  observed_bird is Bird("tiny","red","black stripes") do  -- pattern match
-   io @println "it is a striped sparrow".
-else do
-   io @println "unkown bird".
+function identify
+   with Bird("big","blue","yellow dots") do -- pattern match
+      io @println "it is a blue polka".
+   with Bird("tiny","red","green stripes") do  -- pattern match
+      io @println "it is a green striped finch".
+   with Bird("tiny","red","black stripes") do  -- pattern match
+      io @println "it is a striped sparrow".
+   with _ do
+      io @println "unkown bird".
 end
+
+identify observed_bird.
+
 

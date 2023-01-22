@@ -1,0 +1,18 @@
+bird with
+   size: big
+   coloration: blue
+   markings: yellow dots 
+is blue polka
+
+bird with
+   size: tiny
+   coloration: red
+   markings: green stripes 
+is green striped finch
+
+bird with
+   size: tiny
+   coloration: red
+   markings: black stripes
+is striped sparrow
+

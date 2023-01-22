@@ -29,3 +29,4 @@ catch Exception(_,error) do
    io @println error.
 end
 
+io @println "unknown bird".
