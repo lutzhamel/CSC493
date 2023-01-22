@@ -6,8 +6,6 @@ structure Bird with
    data markings.
 end
 
-let observed_bird = Bird("tiny","red","black stripes").
-
 function identify
    with Bird("big","blue","yellow dots") do -- pattern match
       io @println "it is a blue polka".
@@ -19,6 +17,6 @@ function identify
       io @println "unkown bird".
 end
 
-identify observed_bird.
+identify (Bird("tiny","red","black stripes")).
 
 

@@ -1,0 +1,24 @@
+load system io.
+
+let observed_bird = ("tiny","red","black stripes").
+
+try 
+   let ("big","blue","yellow dots") = observed_bird. -- pattern match
+   io @println "it is a blue polka".
+catch Exception(_,error) do
+   io @println error.
+end
+
+try 
+   let ("tiny","red","green stripes") = observed_bird.  -- pattern match
+   io @println "it is a green striped finch".
+catch Exception(_,error) do
+   io @println error.
+end
+
+try 
+   let ("tiny","red","black stripes") = observed_bird.  -- pattern match
+   io @println "it is a striped sparrow".
+catch Exception(_,error) do
+   io @println error.
+end
