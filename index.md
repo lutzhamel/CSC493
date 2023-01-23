@@ -1,7 +1,9 @@
+# Introduction to Multi-Paradigm Programming
+
 ![paradigms](paradigms.jpg)
 
 <hr>
-# Docs of Interest
+## Docs of Interest
 
 [Syllabus](docs/syllabus.pdf)<br>
 [Programs](https://github.com/lutzhamel/CSC493/tree/main/programs)<br>
@@ -11,11 +13,11 @@
 [Cloud Based Python](https://replit.com/@LutzHamel1/python-csc493)<br>
 
 <hr>
-# Lecture Notes
+## Lecture Notes
 
 [Introduction](notes/csc493-ln001.pdf)<br>
 
-## Imperative Programming with Pattern Matching
+### Imperative Programming with Pattern Matching
 
 [The Basics](notes/csc493-ln002.pdf)<br>
 [Data Structures](notes/csc493-ln003.pdf)<br>
