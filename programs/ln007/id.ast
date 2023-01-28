@@ -1,0 +1,13 @@
+structure foo with
+   function getid with () do
+      return getid(this).
+   end
+end
+
+let o = foo().
+let external_id = getid(o)
+let internal_id = o @getid().
+
+assert (external_id == internal_id).
+
+

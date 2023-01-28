@@ -1,0 +1,12 @@
+structure Rect with
+   data xdim.
+   data ydim.
+   function area with () do
+      return this@xdim * this@ydim.  -- accessing internal identity via this
+   end
+end
+
+let r = Rect(2.0, 4.0).
+let a = r @area ().
+assert (a == 8.0).
+
