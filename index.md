@@ -28,7 +28,7 @@
 
 ### Object-Oriented Programming
 
-["Classic" Object-Oriented Programming & Foundations](notes/csc493-ln006.pdf)<br>
+["Classic" Object-Oriented Programming & Foundations](notes/csc493-ln007.pdf)<br>
 
 
 
