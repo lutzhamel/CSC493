@@ -1,0 +1,7 @@
+load system io.
+load system type.
+
+function getinput with none do
+   return type @tointeger (io @input "enter integer value> ").
+end
+
