@@ -1,0 +1,90 @@
+--------------------------------------------------------------------------
+-- traffic.ast
+-- This is the traffic database for a highway toll station
+
+--------------------------------------------------------------------------
+-- define what kind of vehicles come through the toll station
+
+structure Car with 
+   data kind.        -- "ev", "hybrid", "gas"
+   data occupants.  -- integer between 1 and 4 inclusive
+end
+
+structure Truck with
+   data kind.        -- "small", "medium", "large"
+end
+
+structure Taxi with
+   data company.     -- "YellowCab", "Downtown", "Checkered"
+   data passengers.  -- integer between 0 and 3 inclusive
+end
+
+structure Bus with
+   data capacity.    -- integer 25 and 50
+   data riders.      -- integer 0 and max capacity
+end
+
+--------------------------------------------------------------------------
+-- a list that holds the actual vehicle objects that went through the 
+-- toll station
+
+let traffic = [
+   Car("hybrid", 2),
+   Truck("small"),
+   Taxi("Downtown", 3),
+   Bus(25, 10),
+   Car("gas", 1),
+   Truck("medium"),
+   Taxi("YellowCab", 1),
+   Bus(50, 30),
+   Car("ev", 4),
+   Car("gas", 3),
+   Car("hybrid", 1),
+   Car("ev", 2),
+   Truck("large"),
+   Truck("medium"),
+   Truck("small"),
+   Truck("large"),
+   Taxi("YellowCab", 1),
+   Taxi("Downtown", 2),
+   Taxi("Checkered", 3),
+   Taxi("YellowCab", 1),
+   Bus(25, 20),
+   Bus(50, 40),
+   Bus(25, 15),
+   Bus(50, 30),
+   Car("hybrid", 3),
+   Car("gas", 2),
+   Car("ev", 1),
+   Car("hybrid", 4),
+   Truck("medium"),
+   Truck("large"),
+   Truck("small"),
+   Truck("medium"),
+   Taxi("Downtown", 1),
+   Taxi("Checkered", 2),
+   Taxi("YellowCab", 3),
+   Taxi("Checkered", 1),
+   Bus(50, 45),
+   Bus(25, 22),
+   Bus(50, 38),
+   Bus(25, 18),
+   Car("gas", 4),
+   Car("hybrid", 2),
+   Car("ev", 3),
+   Car("gas", 1),
+   Truck("small"),
+   Truck("medium"),
+   Truck("large"),
+   Truck("small"),
+   Taxi("Downtown", 2),
+   Taxi("Checkered", 1),
+   Taxi("YellowCab", 3),
+   Taxi("YellowCab", 2),
+   Bus(50, 50),
+   Bus(25, 25),
+   Bus(50, 48),
+   Bus(25, 20),
+   Car("hybrid", 1),
+   Car("ev", 4)
+].

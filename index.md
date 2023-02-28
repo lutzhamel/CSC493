@@ -29,6 +29,8 @@
 ### Object-Oriented Programming
 
 ["Classic" Object-Oriented Programming & Foundations](notes/csc493-ln007.pdf)<br>
+["Modern" Object-Oriented Programming](notes/csc493-ln008.pdf)<br>
+[Object-Oriented Programming with Asteroid](notes/csc493-ln009.pdf)<br>
 
 
 

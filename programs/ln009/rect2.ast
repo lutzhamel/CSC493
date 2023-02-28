@@ -1,0 +1,20 @@
+structure Rectangle with
+   data xdim.
+   data ydim.
+   function __init__ with (xdim:%real,ydim:%real) do
+      let this@xdim = xdim.
+      let this@ydim = ydim.
+   end
+   function area with () do
+      return this@xdim * this@ydim.
+   end
+   function __str__ with () do
+      return "Rectangle with dimension "+this@xdim+"x"+this@ydim.
+   end
+end
+
+load system type.
+let r = Rectangle(3.0,2.0).
+assert (r @area () == 6.0).
+assert (type @tostring r == "Rectangle with dimension 3.0x2.0").
+

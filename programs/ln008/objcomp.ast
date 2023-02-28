@@ -1,0 +1,23 @@
+structure Address with
+   data street.
+   data city.
+   data state.
+   data zip.
+end
+
+structure Person with
+   data name.
+   data age.
+   data address.
+end
+
+let address = Address("123 Main St", "Anytown", "CA", "12345").
+let person = Person("John Doe", 30, address).
+
+-- complete destructuring of the person object
+--   => pattern matching on nested objects
+let Person(name,age,Address(stree,city,state,zip)) = person.
+
+assert (name is "John Doe").
+assert (zip is "12345").
+

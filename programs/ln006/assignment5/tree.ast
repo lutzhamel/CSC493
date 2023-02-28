@@ -1,0 +1,10 @@
+-- a simple binary search tree
+
+structure Node with
+   data value.   -- integer values
+   data left.    -- left child
+   data right.   -- right child
+end
+
+-- example tree
+let tree = Node(4,Node(3,none,none),Node(5,none,none)).

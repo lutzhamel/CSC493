@@ -1,0 +1,13 @@
+structure Rectangle with
+   data xdim.
+   data ydim.
+   function area with () do
+      return this@xdim * this@ydim.
+   end
+end
+
+load system type.
+let r = Rectangle(3,2).
+assert (r @area () == 6).
+assert (type @tostring r == "Rectangle(3,2)").
+
