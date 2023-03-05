@@ -1,10 +1,29 @@
--- a simple binary search tree
+-- simple binary search trees
 
 structure Node with
    data value.   -- integer values
    data left.    -- left child
    data right.   -- right child
+   function __init__ 
+      with (v,l,r) do -- construct binary node
+         let this@value = v.
+         let this@left = l.
+         let this@right = r.
+      with v do -- construct leaf node
+         let this@value = v.
+         let this@left = none.
+         let this@right = none.
+   end
 end
 
--- example tree
-let tree = Node(4,Node(3,none,none),Node(5,none,none)).
+-- binary search tree
+let tree = Node(8,
+            Node(4,
+               Node(2),
+               Node(6)),
+            Node(12,
+               Node(10),
+               Node(16,
+                  Node(14),
+                  Node(18)))).
+

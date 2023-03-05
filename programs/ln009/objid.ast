@@ -1,0 +1,10 @@
+structure A with
+   function identity with none do
+      return this.
+   end
+end
+
+let o = A().
+-- getid maps an object to a unique identifier
+assert (getid(o) == getid(o @identity ())).
+

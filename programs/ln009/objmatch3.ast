@@ -1,0 +1,15 @@
+load system io.
+
+structure Person with
+    data name.
+    data age.
+    function hello with none do
+        io @println ("Hello, my name is "+this@name).
+    end
+end
+
+-- pattern match only successful for objects with 
+-- names that contain two lower case t's
+let scarlett:Person(".*t.*t.*",_) = Person("Scarlett",28).
+scarlett @hello ().
+

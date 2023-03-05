@@ -1,0 +1,29 @@
+load system io.
+
+structure Circle with
+   data name.
+   -- draw interface
+   function draw with () do
+       io @println ("Drawing a circle "+this@name).
+   end
+end
+
+structure Square with
+   data name.
+   -- draw interface
+   function draw with () do
+       io @println ("Drawing a square "+this@name).
+   end
+end
+
+let v = [].
+v @append (Circle("Circle1")).
+v @append (Square("Square1")).
+v @append (Circle("Circle2")).
+for i in range (len v) do
+   v@i @draw ().
+end
+
+
+
+

@@ -1,0 +1,15 @@
+load system io.
+
+structure Person with
+    data name.
+    function hello with none do
+        io @println ("Hello, my name is "+this@name).
+    end
+    data age.
+ end
+
+-- functions are ignored during pattern matching
+let Person(name,age) = Person("Scarlett",28).
+assert(name == "Scarlett").
+assert(age == 28).
+

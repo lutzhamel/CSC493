@@ -1,0 +1,8 @@
+-- calling member function 'flip' on a string
+let s = "abc" @flip ().
+assert (s == "cba").
+
+-- check where 2 is on the list using the 
+-- member function 'index'
+assert ([1,2,3,4] @index 2 == 1).
+
