@@ -32,5 +32,14 @@
 ["Modern" Object-Oriented Programming](notes/csc493-ln008.pdf)<br>
 [Object-Oriented Programming with Asteroid](notes/csc493-ln009.pdf)<br>
 
+### Functional Programming
+
+[Foundation](notes/csc493-ln010.pdf)<br>
+
+
+### Programming with First-Class Patterns
+
+
+
 
 
