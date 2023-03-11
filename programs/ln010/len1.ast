@@ -1,0 +1,13 @@
+-- imperative solution
+function len with list do
+   let remaining_list = list.
+   let cnt = 0.
+   repeat
+      let [_|remaining_list] = remaining_list.
+      let cnt = cnt + 1.
+   until remaining_list is [].
+end
+
+let q = [ 1 to 10].
+assert (len q == 10).
+
