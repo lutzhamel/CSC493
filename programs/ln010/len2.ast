@@ -6,6 +6,6 @@ function len
       1 + len remaining_list
 end
 
-let q = [ 1 to 10].
+let q = [1 to 10].
 assert (len q == 10).
 

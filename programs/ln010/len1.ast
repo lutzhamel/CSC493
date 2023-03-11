@@ -8,6 +8,6 @@ function len with list do
    until remaining_list is [].
 end
 
-let q = [ 1 to 10].
+let q = [1 to 10].
 assert (len q == 10).
 
