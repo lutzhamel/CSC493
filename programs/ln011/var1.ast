@@ -1,0 +1,12 @@
+-- imperative programming
+function sumlist with x:%list do
+   let sum = 0.
+   for i in range(len(x)) do
+      let sum = sum + x@i.
+   end
+   return sum.
+end
+
+assert (sumlist [1,2,3] == 6).
+
+

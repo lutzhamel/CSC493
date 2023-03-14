@@ -1,0 +1,8 @@
+function scale with v do
+   let v = v+1.
+   let v = 2*v.
+   return v.
+end
+
+assert (scale 2 == 6).
+

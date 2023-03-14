@@ -1,0 +1,10 @@
+-- declarative programming
+function sumlist 
+   with [] do
+      0
+   with [e|rest] do
+      e + sumlist rest
+end
+
+assert (sumlist [1,2,3] == 6).
+

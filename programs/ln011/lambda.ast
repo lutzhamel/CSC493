@@ -1,0 +1,4 @@
+function main with () do
+   let y = lambda with x do x+1.
+end
+

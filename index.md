@@ -37,7 +37,7 @@
 ### Functional Programming
 
 [Foundations](notes/csc493-ln010.pdf)<br>
-
+[Functional Programming in Asteroid -- Basics](notes/csc493-ln011.pdf)<br>
 
 ### Programming with First-Class Patterns
 

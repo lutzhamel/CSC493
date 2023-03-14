@@ -1,0 +1,7 @@
+-- declarative programming
+function sign with x do
+   1 if x >= 0 else -1
+end
+
+assert (sign(-11) == -1).
+

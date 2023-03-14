@@ -1,0 +1,12 @@
+-- imperative programming
+function sign with x do
+   if x >= 0 do
+      let res = 1.
+   else 
+      let res = -1.
+   end
+   return res.
+end
+
+assert (sign(-11) == -1).
+
