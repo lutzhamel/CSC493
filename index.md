@@ -38,6 +38,8 @@
 
 [Foundations](notes/csc493-ln010.pdf)<br>
 [Functional Programming in Asteroid -- Basics](notes/csc493-ln011.pdf)<br>
+[Higher-Order Programming](notes/csc493-ln012.pdf)<br>
+[Working with Partially evaluated Functions - Currying](notes/csc493-ln013.pdf)<br>
 
 ### Programming with First-Class Patterns
 

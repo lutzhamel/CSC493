@@ -1,0 +1,11 @@
+list @map f
+
+-- is equivalent to --
+
+let r = [].
+for e in list do
+   r @append(f e).
+end
+let list = r.
+
+

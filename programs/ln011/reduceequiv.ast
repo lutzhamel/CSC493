@@ -1,0 +1,10 @@
+list @ reduce f
+
+-- is equivalent to --
+
+let value = list@0.
+for i in range(len(list)) do
+      let value = f (value,l@i).
+end
+-- value has now the reduced value of the list
+

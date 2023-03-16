@@ -1,0 +1,26 @@
+load system hash.
+
+function add with (a,b) do a + b end
+function sub with (a,b) do a - b end
+function mul with (a,b) do a * b end
+function div with (a,b) do a / b end
+
+let dispatch_table = hash @hash ().
+dispatch_table @insert [
+   ("+",add),
+   ("-",sub),
+   ("*",mul),
+   ("/",div)
+]
+
+function calculate with (operator,a,b) do
+   let operation = dispatch_table @get operator.
+   return operation (a,b).
+end
+
+-- Example usage
+assert (calculate("+", 3, 5) == 8) 
+assert (calculate("-", 7, 2) == 5) 
+assert (calculate("*", 2, 4) == 8) 
+assert (calculate("/", 10, 2) == 5)
+

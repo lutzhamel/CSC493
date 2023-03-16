@@ -1,0 +1,4 @@
+let value = [1,2,3] @reduce (lambda with (x,y) do x+y).
+
+assert(value == 6).
+

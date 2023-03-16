@@ -1,0 +1,21 @@
+load system hash.
+
+let dispatch_table = hash @hash ().
+
+dispatch_table @insert [
+   ("+",lambda with (a,b) do a + b),
+   ("-",lambda with (a,b) do a - b),
+   ("*",lambda with (a,b) do a * b),
+   ("/",lambda with (a,b) do a / b)
+]
+
+function calculate with (operator,a,b) do
+   dispatch_table @get operator (a,b)
+end
+
+-- Example usage
+assert (calculate("+", 3, 5) == 8) 
+assert (calculate("-", 7, 2) == 5) 
+assert (calculate("*", 2, 4) == 8) 
+assert (calculate("/", 10, 2) == 5)
+

@@ -1,0 +1,7 @@
+-- factorial with reduce
+function fact with x do
+   [1 to x] @reduce (lambda with (i,j) do i*j)
+end
+
+assert (fact 3 == 6).
+
