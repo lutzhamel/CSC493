@@ -1,0 +1,6 @@
+function add3 with (a1,a2,a3) do
+   a1+a2+a3
+end
+
+assert (add3 (1,2,3) == 6).
+

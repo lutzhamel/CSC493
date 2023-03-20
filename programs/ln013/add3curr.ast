@@ -1,0 +1,7 @@
+function add3curr with a1 do
+   (lambda with a2 do 
+      (lambda with a3 do a1+a2+a3))
+end
+
+assert (add3curr 1 2 3 == 6).
+
