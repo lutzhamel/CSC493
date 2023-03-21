@@ -1,0 +1,8 @@
+load system sort.
+
+let sl = sort @sort(
+   (lambda with (x,y) do true if x>y else false),
+   [10,5,110,50]).
+
+assert (sl == [110,50,10,5]).
+
