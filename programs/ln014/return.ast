@@ -1,0 +1,17 @@
+function match with v do
+   let pos_int = pattern (x:%integer) if x > 0.
+   let neg_int = pattern (y:%integer) if x < 0.
+   
+   if v is *pos_int do
+      return pos_int
+   elif v is *neg_int do
+      return neg_int
+   else
+      none
+   end
+end
+
+assert (match 1 is %pattern).
+assert (match 0 is none).
+
+

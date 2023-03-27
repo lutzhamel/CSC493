@@ -1,0 +1,9 @@
+function f 
+   with (x,y) if x > y do
+      "GT"
+   with (x,y) if x < y do
+      "LT"
+   with _ do
+      throw Error("not a valid tuple")
+end
+

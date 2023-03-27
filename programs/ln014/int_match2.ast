@@ -1,0 +1,11 @@
+let pos_int = pattern (x:%integer) if x>0.
+
+function fact
+   with 0 do
+      1
+   with n:*pos_int do
+      n*fact(n-1)
+end
+
+assert (fact 3 == 6).
+

@@ -1,0 +1,12 @@
+let gt = pattern (x,y) if x > y.
+let lt = pattern (x,y) if x < y.
+
+function f 
+   with *gt do
+      "GT"
+   with *lt do
+      "LT"
+   with _ do
+      throw Error("not a valid tuple")
+end
+

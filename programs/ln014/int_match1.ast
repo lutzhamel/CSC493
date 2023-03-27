@@ -1,0 +1,9 @@
+function fact
+   with 0 do
+      1
+   with (n:%integer) if n>0 do
+      n*fact(n-1)
+end
+
+assert (fact 3 == 6).
+

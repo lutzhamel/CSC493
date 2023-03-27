@@ -1,0 +1,4 @@
+function mymap with (a:%list, f:%function) do
+   a @map f.
+end
+

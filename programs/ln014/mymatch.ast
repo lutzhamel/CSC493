@@ -1,0 +1,9 @@
+-- return true if value v matches pattern p 
+-- false otherwise
+function mymatch with (p:%pattern,v) do
+   v is *p
+end
+
+assert (mymatch (pattern (x,y)), (1,2)).
+assert (not mymatch (pattern (x,y), (1,2,3))).
+
