@@ -44,7 +44,7 @@
 ### Programming with First-Class Patterns
 
 [First-Class Patterns -- Basics](notes/csc493-ln014.pdf)<br>
-[Advanced Applications & Features](notes/csc493-ln015.pdf)<br>
+[Advanced Features & Applications](notes/csc493-ln015.pdf)<br>
 [First-Class Patterns as Types](notes/csc493-ln016.pdf)<br>
 
 
