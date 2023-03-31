@@ -1,22 +1,29 @@
 -- functional implementation of quicksort
 
-function filter 
-   with ([],_,_) do
+function filter_lt 
+   with ([],_) do
       []
-   with ([e|rest],pivot,fcmp) do
-      [e] + filter (rest,pivot,fcmp)
-         if fcmp (e,pivot)
-         else filter (rest,pivot,fcmp)
+   with ([e|rest],pivot) do
+      [e] + filter_lt (rest,pivot)
+         if e < pivot
+         else filter_lt (rest,pivot)
+end
+
+function filter_ge 
+   with ([],_) do
+      []
+   with ([e|rest],pivot) do
+      [e] + filter_ge (rest,pivot)
+         if e >= pivot
+         else filter_ge (rest,pivot)
 end
 
 function qsort
-  with [] do -- empty list
+  with [] do
     []
-  with [a] do -- single element list
-    [a]
-  with [pivot|rest] do -- head-tail operator
-    let less = filter (rest,pivot,lambda with (x,y) do x < y).
-    let more = filter (rest,pivot,lambda with (x,y) do x >= y).
+  with [pivot|rest] do 
+    let less = filter_lt (rest,pivot).
+    let more = filter_ge (rest,pivot).
     qsort less + [pivot] + qsort more.
 end
 

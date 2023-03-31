@@ -1,0 +1,7 @@
+function reverse
+   with [] do
+      [] -- identity of list concatenation
+   with [e|rest] do
+      reverse rest + [e]
+end
+

@@ -1,0 +1,18 @@
+function fact
+   with 0 do
+      1
+   with (n:%integer) if n > 0 do
+      n * fact (n-1).
+   with (n:%integer) if n < 0 do
+      throw Error("negative value").
+end
+
+function sign
+   with 0 do
+      1
+   with (n:%integer) if n > 0 do
+      1
+   with (n:%integer) if n < 0 do
+      -1
+end
+
