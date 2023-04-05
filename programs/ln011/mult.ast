@@ -2,6 +2,6 @@ function mult
    with [] do
       1  -- identity of the multiplication operator
    with [e|rest] do
-      e * rest
+      e * mult rest
 end
 

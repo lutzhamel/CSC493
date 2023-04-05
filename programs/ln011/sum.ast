@@ -2,6 +2,6 @@ function sum
    with [] do
       0  -- identity of the addition operator
    with [e|rest] do
-      e + rest
+      e + sum rest
 end
 
