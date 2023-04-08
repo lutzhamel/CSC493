@@ -1,0 +1,9 @@
+-- constraint
+let scalar = pattern %[k if (k is %integer) or (k is %real)]%.
+
+-- fold is a applied to a pair of scalar values
+function fold with (x:*scalar, y:*scalar) do
+   x+y
+end
+
+assert (fold (1,2) == 3).

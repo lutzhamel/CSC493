@@ -1,0 +1,14 @@
+-- our constraint pattern
+let p = pattern %[k if k in range 10]%.
+
+-- a simple loop that creates a list of values
+let out = [].
+let k = 2.  
+for i in range 10 do
+   if i is *p do
+      out @append (k).
+   end
+end
+
+assert (out == [2,2,2,2,2,2,2,2,2,2]). -- succeeds!
+

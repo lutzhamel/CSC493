@@ -1,0 +1,11 @@
+function dot with ((a1 if (a1 is %real) or (a1 is %integer), b1 if (b1 is %real) or (b1 is %integer)),
+                   (a2 if (a2 is %real) or (a2 is %integer), b2 if (b2 is %real) or (b2 is %integer))) do
+   a1*a2+b1*b2
+end
+
+-- define basis vectors of 2D space
+let i1 = (1,0).
+let i2 = (0,1).
+-- the dot product of basis vector is always 0
+assert (dot(i1,i2) == 0).
+

@@ -1,0 +1,17 @@
+-- declare a pattern that matches scalar values
+let Scalar = pattern %[p if (p is %integer) or (p is %real)]%.
+
+-- declare a pattern that matches pairs of scalars
+let Pair = pattern %[(x:*Scalar,y:*Scalar)]%.
+
+-- compute the dot product of two pairs of scalars
+function dot with (*Pair bind [x as a1, y as a2], *Pair bind [x as b1, y as b2]) do
+   a1*b1 + a2*b2
+end
+
+-- define basis vectors of 2D space
+let i1 = (1,0).
+let i2 = (0,1).
+-- the dot product of basis vector is always 0
+assert (dot(i1,i2) == 0).
+
