@@ -28,3 +28,4 @@ let v :*Shape_List = v + [Circle("Circle2")].
 for i in range (len v) do
    v@i @draw ().
 end
+
