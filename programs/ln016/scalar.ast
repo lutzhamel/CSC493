@@ -1,0 +1,4 @@
+let Scalar = pattern %[x if (x is %integer) or (x is %real)]%.
+
+let i:*Scalar = v.
+

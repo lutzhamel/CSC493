@@ -1,0 +1,30 @@
+load system io.
+
+structure Circle with
+   data name.
+   -- draw interface
+   function draw with () do
+       io @println ("Drawing a circle "+this@name).
+   end
+end
+
+structure Square with
+   data name.
+   -- draw interface
+   function draw with () do
+       io @println ("Drawing a square "+this@name).
+   end
+end
+
+let Shape = pattern %[x if (x is %Circle) or (x is %Square)]%
+let Shape_List = pattern %[(x:%list) 
+      if x @reduce(lambda with (acc,e) do acc and (e is *Shape),true)]%
+
+let v :*Shape_List = [].
+let v :*Shape_List = v + [Circle("Circle1")].
+let v :*Shape_List = v + [Square("Square1")].
+let v :*Shape_List = v + [Circle("Circle2")].
+
+for i in range (len v) do
+   v@i @draw ().
+end

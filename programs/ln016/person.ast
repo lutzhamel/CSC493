@@ -1,0 +1,24 @@
+structure Address with
+   data street.
+   data city.
+   data zip.
+   function __init__ with (street:%string,city:%string,zip:%string) do
+      let this@street = street.
+      let this@city = city.
+      let this@zip = zip.
+   end
+end
+
+structure Person with
+   data name.
+   data profession.
+   data address.
+   function __init__ with (name:%string,profession:%string,address:%Address) do
+      let this@name = name.
+      let this@profession = profession.
+      let this@address = address.
+   end
+end
+
+let joe = Person("Joe","Carpenter",Address("532 Main Street","Newport","02840")).
+

@@ -1,0 +1,4 @@
+let Pos_Int = pattern %[k if (k is %integer) and (k>0)]%.
+
+let x:*Pos_Int = v.
+
