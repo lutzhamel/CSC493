@@ -1,0 +1,12 @@
+let Int_List = pattern %[(x:%list) 
+      if x @reduce(lambda with (acc,v) do acc and (v is %integer), true)]%.
+
+function len 
+   with []:*Int_list do
+      0
+   with [e|rest]:*Int_List do
+      1 + len rest
+end
+
+assert (len [1,2,3] == 3).
+

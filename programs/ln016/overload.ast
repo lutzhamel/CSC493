@@ -1,0 +1,21 @@
+load system math.
+
+structure Rectangle with
+   data length.
+   data width.
+end
+
+structure Circle with
+   data radius.
+end
+
+function circumference -- overloaded function
+   with a:%Rectangle do
+      2*(a@length+a@width)
+   with a:%Circle do
+      2*math@pi*a@radius
+end
+
+assert (circumference(Rectangle(2,4)) == 12).
+assert (math @ceil(circumference(Circle(3))) == 19).
+
