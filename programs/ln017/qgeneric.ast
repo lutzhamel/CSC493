@@ -1,0 +1,42 @@
+load system type.
+
+structure Person with
+   data name.
+   data age.
+   function __str__ with () do this@name+"("+this@age+")" end
+end
+
+let people = [
+   Person("Liz",32),
+   Person("Joe",20),
+   Person("Jessica",22),
+   Person("Peter",18)
+].
+
+function order_age with (a:%Person,b:%Person) do
+   a@age <= b@age.
+end
+
+function qsort
+   with ([],%function) do
+      []
+   with ([a],%function) do
+      [a]
+   with ([pivot|rest],order:%function) do
+      let less = [].
+      let more = [].
+      for e in rest do
+         if order (e,pivot) do
+            less @append e.
+         else do
+            more @append e.
+         end
+      end
+      qsort (less,order) + [pivot] + qsort (more,order).
+end
+
+-- sort people by their age
+let sorted = qsort (people,order_age).
+assert (type @tostring sorted == "[Peter(18),Joe(20),Jessica(22),Liz(32)]")
+
+      

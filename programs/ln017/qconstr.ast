@@ -1,0 +1,26 @@
+-- constraint patterns to define the qsort domain
+load system type.
+let f = lambda with (acc,x) do acc and type @isscalar x.
+let Scalar_List = pattern %[(a:%list) if a @reduce (f,true)]%.
+
+function qsort
+   with []:*Scalar_List do
+      []
+   with [a]:*Scalar_List do
+      [a]
+   with [pivot|rest]:*Scalar_List do
+      let less = [].
+      let more = [].
+      for e in rest do
+         if e <= pivot do
+            less @append e.
+         else do
+            more @append e.
+         end
+      end
+      qsort less + [pivot] + qsort more.
+end
+
+assert (qsort [3,7,1,6,9,5,2,10,8,4] == [1,2,3,4,5,6,7,8,9,10]).
+
+      
