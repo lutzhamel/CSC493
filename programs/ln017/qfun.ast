@@ -1,0 +1,21 @@
+-- functional version of the quicksort
+function qsort
+   with [] do
+      []
+   with [a] do
+      [a]
+   with [pivot|rest] do
+      function filter 
+         with ([],_) do
+            ([],[])
+         with ([e|rest],pivot) do
+            let (a,b) = filter (rest,pivot).
+            return ([e]+a,b) if e <= pivot else (a,[e]+b).
+      end
+      let (less,more) = filter (rest,pivot).
+      qsort less + [pivot] + qsort more.
+end
+
+assert (qsort [3,7,1,6,9,5,2,10,8,4] == [1,2,3,4,5,6,7,8,9,10]).
+
+      

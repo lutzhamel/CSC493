@@ -1,0 +1,22 @@
+-- multi-paradigm version of the quicksort
+function qsort
+   with [] do
+      []
+   with [a] do
+      [a]
+   with [pivot|rest] do
+      let less = [].
+      let more = [].
+      for e in rest do
+         if e <= pivot do
+            less @append e.
+         else do
+            more @append e.
+         end
+      end
+      qsort less + [pivot] + qsort more.
+end
+
+assert (qsort [3,7,1,6,9,5,2,10,8,4] == [1,2,3,4,5,6,7,8,9,10]).
+
+      

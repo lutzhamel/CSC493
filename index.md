@@ -48,6 +48,10 @@
 [First-Class Patterns as Types](notes/csc493-ln016.pdf)<br>
 
 
+### Putting it All Together
+
+[Putting it All Together](notes/csc493-ln017.pdf)<br>
+[Semester Summary](notes/csc493-ln018.pdf)<br>
 
 
 

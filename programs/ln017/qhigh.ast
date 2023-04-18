@@ -1,0 +1,22 @@
+-- higher-order programming version of the quicksort
+function qsort
+   with ([],%function) do
+      []
+   with ([a],%function) do
+      [a]
+   with ([pivot|rest],order:%function) do
+      let less = [].
+      let more = [].
+      for e in rest do
+         if order (e,pivot) do
+            less @append e.
+         else do
+            more @append e.
+         end
+      end
+      qsort (less,order) + [pivot] + qsort (more,order).
+end
+
+assert (qsort ([2,5,1,3,4],lambda with (a,b) do a<=b) == [1,2,3,4,5]).
+
+      
