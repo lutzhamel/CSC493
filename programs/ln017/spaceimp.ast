@@ -1,0 +1,30 @@
+load system io.
+load system type.
+
+structure Asteroid with data size end
+structure Spaceship with data size end
+
+function collide with (a,b) do
+   let typea = type @gettype a.
+   let typeb = type @gettype b.
+   if (typea in ["Asteroid","Spaceship"]) and
+      (typeb in ["Asteroid","Spaceship"]) and
+      (a@size > 100) and 
+      (b@size > 100) do
+      return "Big boom! collision"  
+   elif typea == "Asteroid" and typeb == "Asteroid" do
+      return "asteroid <-> asteroid collision ".
+   elif typea == "Spaceship" and typeb == "Spaceship" do
+      return "spaceship <-> spaceship collision".
+   elif (typea in ["Asteroid","Spaceship"]) and
+      (typeb in ["Asteroid","Spaceship"]) do
+      return "spaceship <-> asteroid collision".
+   else do
+      throw Error("unkown collision")
+   end
+end
+
+io @println (collide(Asteroid(101), Spaceship(300))).
+io @println (collide(Asteroid(10), Spaceship(10))).
+io @println (collide(Spaceship(101), Spaceship(10))).
+
